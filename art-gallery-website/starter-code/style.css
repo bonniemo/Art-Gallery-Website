@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.hero img {
+    display: block;
+}
+
+@media screen and (max-width: 700px) {
+    .hero img {
+        width: 100%;
+    }
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin: 1.5rem 1rem;
+    text-transform: uppercase;
+}
+
+.hero h1>span {
+    display: block;
+}
+
+.hero p {
+     
+    margin: 0 1 1.5rem;
+}
+
+.hero button {    
+    padding: 1rem 3rem;
+    margin-bottom: 1.5rem; 
+    margin: 1.5rem 1rem;
+}
+
+@media screen and (min-width: 700px) {
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;        
+    }
+    
+    .hero picture {
+       grid-column: 1;
+       grid-row: 1/3;
+       object-fit: cover;
+       display: block;
+    }
+
+    /* .hero__txt {
+        position: relative;
+        left: -3rem;
+        min-height: 60%;
+    } */
+    
+    .hero h1 {
+        font-size: 2rem;
+        margin: 1.5rem 0;
+        grid-column: 3;
+        grid-row: 1;
+        align-self: end;
+        position: relative;
+        left: -3.5rem;        
+    }
+    
+    .hero h1>span {
+        display: block;
+    }
+
+    .hero__txt__right {
+        grid-column: 3;
+        grid-row: 2/3;
+        position: relative;
+        left: -3.5rem;
+    }
+    
+    .hero p {
+        margin: 1.5rem 0;
+    }
+    
+    .hero button {
+        margin-bottom: 1.5rem; 
+        margin: 0;
+    }  
+}
+
+@media screen and (min-width: 1000px) {
+    .hero {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;  
+    }
+
+    .hero__black {
+        background-color: black;
+        grid-column: 1/2;
+        grid-row: 1/3;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .hero picture {
+       grid-column: 2;
+       grid-row: 1/3;
+       object-fit: cover;
+       display: block;
+    }
+    
+    .hero h1 {
+        grid-column: 1/3;
+        grid-row: 1/3; 
+        position: relative;
+        left: 15%;
+        color: white;
+        font-size: 3rem;
+        margin: 1.5rem 0;
+        align-self: center;
+    }
+    
+    .hero h1>span {
+        display: block;
+    }
+
+    .hero__txt__right {
+        grid-column: 3;
+        grid-row: 1/3;
+        position: relative;
+        left: -4rem;        
+        align-self: center;
+    }
+    
+    .hero p {
+        color: black;
+        margin: 1.5rem 0;
+    }
+    
+    .hero button {
+        margin: 0 0 1.5rem; 
+    }  
+}
