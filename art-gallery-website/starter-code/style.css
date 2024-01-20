@@ -10,8 +10,9 @@
   --font-heading: 'Big Shoulders Display', sans-serif;
 
   /* FONTSIZE */
-  --font-size-big: clamp(3.75rem, 2.9577rem + 3.3803vw, 6rem);
-  --font-size-medium: clamp(3.125rem, 2.9049rem + 0.9390vw, 3.75rem);
+  --header-size-big: clamp(3.75rem, 2.9577rem + 3.3803vw, 6rem);
+  --header-size-medium: clamp(2.5rem, 1.625rem + 2vw, 3.5rem);
+  --header-size-small: clamp(1.2rem, 0.5455rem + 2.6182vw, 3rem);
 
   --p-size-big: clamp(1.125rem, 1.0370rem + 0.3756vw, 1.375rem);;
   --p-size-small: clamp(1rem, 0.9560rem + 0.1878vw, 1.125rem);
@@ -31,12 +32,16 @@ h3 {
 }
 
 h1 {
-    font-size: var(--font-size-big);
+    font-size: var(--header-size-big);
     margin: 1.5rem 1rem;
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: var(--header-size-medium);
+}
+
+h3 {
+    font-size: var(--header-size-small);
 }
 
 p {
@@ -48,7 +53,7 @@ footer p {
     font-size: var(--p-size-small);
 }
 
-.hero h1>span {
+span {
     display: block;
 }
 
@@ -64,6 +69,7 @@ img {
 
     .hero p {
         margin: 0 1rem;
+        
     }
 }
 
@@ -171,7 +177,7 @@ img {
 }
 
 @media screen and (max-width: 700px) {
-    .main picture {
+    .main img {
         width: 100%;
         height: 100%;
     }
@@ -190,7 +196,8 @@ img {
     }
 
     .main img {
-        width: 100%;        
+        width: 100%;
+        height: 100%;        
     }
 
     .main__day-txt-wrap {
@@ -218,6 +225,20 @@ img {
         grid-row: 3/4;
         
     }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        padding: clamp(2rem, -5rem + 16vw, 10rem);;
+    }
+
+    .footer p {
+        width: clamp(17rem, 8.25rem + 20vw, 27rem);
+    }
+
+    .footer__social-media {
+        height: max-content;
+    }
 }
 
 .main p {
@@ -229,16 +250,25 @@ img {
     padding: 1rem 0;
 }
 
-.main__inspired-txt-wrap,
-.footer {
+.main__inspired-txt-wrap {
     padding: clamp(2rem, 0.9437rem + 4.5070vw, 5rem);
     background-color: var(--c-dark);
     color: var(--c-light);
 }
 
+.footer {
+    background-color: var(--c-dark);
+    color: var(--c-light);
+}
+
 @media screen and (max-width: 700px) {
+    .footer {
+        padding: 3rem 2rem;
+    }
+
     .footer p {
         margin: 2.4rem 0;
+        max-width: clamp(20rem, 12rem + 32vw, 26rem);
     }
 }
 
